@@ -24,7 +24,7 @@ module.exports.getAllCompanies = async (event, context, callback) => {
     } 
 }
 
-//  Get All Companies
+//  Get Company by ID
 module.exports.getAllCompaniesById = async (event, context, callback) => {
   const { company_id } = event.pathParameters
 
