@@ -1,0 +1,10 @@
+# package directories
+node modules
+jspm_packages
+package-lock.json
+
+# serverless directories
+.serverless
+
+# sensitive files
+.env
