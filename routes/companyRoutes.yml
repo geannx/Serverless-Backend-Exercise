@@ -69,44 +69,44 @@
             path: /team/{team_id}
             method: delete
     
-    # getEmployeeByCompany:
-    #   handler: handler.getEmployeeByCompany
-    #   events:
-    #     - httpApi: 
-    #         path: /employee/{company_name}
-    #         method: get
+    getEmployeeByCompany:
+      handler: handlers/getEmployeeByCompanyHandler.getEmployeeByCompany
+      events:
+        - httpApi: 
+            path: /employee/{company_name}
+            method: get
 
-    # getEmployeeByTeam:
-    #   handler: handler.getEmployeeByTeam
-    #   events:
-    #     -  httpApi:
-    #         path: /employee/team/{team_name}
-    #         method: get
+    getEmployeeByTeam:
+      handler: handlers/getEmployeeByTeamHandler.getEmployeeByTeam
+      events:
+        -  httpApi:
+            path: /employee/team/{team_name}
+            method: get
     
-    # getEmployeeById:
-    #   handler: handler.getEmployeeById
-    #   events:
-    #   - httpApi:
-    #       path: /employee/id/{id}
-    #       method: get
+    getEmployeeById:
+      handler: handlers/getEmployeeByIdHandler.getEmployeeById
+      events:
+      - httpApi:
+          path: /employee/id/{employee_id}
+          method: get
     
-    # createEmployee:
-    #   handler: handler.createEmployee
-    #   events: 
-    #     - httpApi:
-    #         path: /employee
-    #         method: post
+    createEmployee:
+      handler: handlers/createEmployeeHandler.createEmployee
+      events: 
+        - httpApi:
+            path: /employee
+            method: post
 
-    # editEmployee:
-    #   handler: handler.editEmployee
-    #   events:
-    #     - httpApi:
-    #         path: /employee/{emp_id}
-    #         method: put
+    editEmployee:
+      handler: handlers/editEmployeeHandler.editEmployee
+      events:
+        - httpApi:
+            path: /employee/{employee_id}
+            method: put
     
-    # archiveEmployee:
-    #   handler: handler.archiveEmployee
-    #   events:
-    #     - httpApi:
-    #         path: /employee/{emp_id}
-    #         method: delete
+    archiveEmployee:
+      handler: handlers/archiveEmployeeHandler.archiveEmployee
+      events:
+        - httpApi:
+            path: /employee/{employee_id}
+            method: delete

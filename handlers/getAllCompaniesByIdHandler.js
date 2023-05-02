@@ -13,4 +13,4 @@ module.exports.getCompanyById = async (event, context, callback) => {
         statusCode: statusCode
     }
   
-  }
+}

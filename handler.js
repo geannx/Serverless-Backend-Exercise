@@ -266,8 +266,7 @@ module.exports.getEmployeeByCompany = async (event, context, callback) => {
         body: JSON.stringify({ message: error }),
         statusCode: 400
       }
-    }
- 
+    } 
 }
 
 // Get All Employee By Team
