@@ -10,7 +10,7 @@ module.exports.archiveCompanyService = async (company_id) => {
       await Promise.all([
         databaseQuery(`UPDATE companies SET archived = true, modified_at = CURRENT_TIMESTAMP WHERE company_id = ${company_id}`),
         databaseQuery(`UPDATE team SET archived = true, modified_at = CURRENT_TIMESTAMP WHERE company = '${company_name}'`),
-        databaseQuery(`UPDATE employees SET archived = true, modified_at = CURRENT_TIMESTAMP WHERE team = (SELECT team_name FROM team WHERE company = '${company_name}')`)
+        databaseQuery(`UPDATE employees SET archived = true, modified_at = CURRENT_TIMESTAMP WHERE team IN (SELECT team_name FROM team WHERE company = '${company_name}')`)
       ]);
       
       return {
